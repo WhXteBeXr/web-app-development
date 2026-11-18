@@ -1,0 +1,64 @@
+Проверка лабораторной 2: 18.11.2026
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python --version
+Python 3.14.10
+Код завершения: 0
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python -m pip list --disable-pip-version-check
+Package  Version
+-------- -------
+asgiref  3.12.1
+Django   6.1.1
+pillow   13.0.0
+pip      26.0.1
+ruff     0.16.8
+sqlparse 0.6.0
+Код завершения: 0
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python -m pip check --disable-pip-version-check
+No broken requirements found.
+Код завершения: 0
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python lab2/manage.py check
+System check identified no issues (0 silenced).
+Код завершения: 0
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python lab2/manage.py showmigrations
+admin
+ [X] 0001_initial
+ [X] 0002_logentry_remove_auto_add
+ [X] 0003_logentry_add_action_flag_choices
+auth
+ [X] 0001_initial
+ [X] 0002_alter_permission_name_max_length
+ [X] 0003_alter_user_email_max_length
+ [X] 0004_alter_user_username_opts
+ [X] 0005_alter_user_last_login_null
+ [X] 0006_require_contenttypes_0002
+ [X] 0007_alter_validators_add_error_messages
+ [X] 0008_alter_user_username_max_length
+ [X] 0009_alter_user_last_name_max_length
+ [X] 0010_alter_group_name_max_length
+ [X] 0011_update_proxy_permissions
+ [X] 0012_alter_user_first_name_max_length
+contenttypes
+ [X] 0001_initial
+ [X] 0002_remove_content_type_name
+news
+ [X] 0001_initial
+ [X] 0002_comment_rating_comment_comment_rating_1_to_5
+sessions
+ [X] 0001_initial
+Код завершения: 0
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python lab2/manage.py makemigrations --check --dry-run
+No changes detected
+Код завершения: 0
+
+$ .venv/bin/ruff check lab2
+All checks passed!
+Код завершения: 0
+
+$ .venv/bin/ruff format --check lab2
+18 files already formatted
+Код завершения: 0

@@ -1,0 +1,175 @@
+[
+  {
+    "method": "GET",
+    "path": "/news/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "Hello world",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/news/test/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "<h1>Тестовая страница</h1>",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/news/?q=example",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "Hello world",
+    "passed": true
+  },
+  {
+    "method": "HEAD",
+    "path": "/news/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "",
+    "passed": true
+  },
+  {
+    "method": "HEAD",
+    "path": "/news/test/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/news",
+    "status": 301,
+    "content_type": "text/html; charset=utf-8",
+    "location": "/news/",
+    "body": "",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/news/test",
+    "status": 301,
+    "content_type": "text/html; charset=utf-8",
+    "location": "/news/test/",
+    "body": "",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "[HTML-страница Django]",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/test/",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "[HTML-страница Django]",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/news/missing/",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "[HTML-страница Django]",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/admin/",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "location": "/admin/login/?next=/admin/",
+    "body": "",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/admin/login/?next=/admin/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "[HTML-страница Django]",
+    "passed": true
+  },
+  {
+    "method": "POST",
+    "path": "/news/",
+    "status": 403,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "[HTML-страница Django]",
+    "passed": true
+  },
+  {
+    "method": "POST",
+    "path": "/news/",
+    "status": 405,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "",
+    "passed": true
+  },
+  {
+    "method": "POST",
+    "path": "/news/test/",
+    "status": 405,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "",
+    "passed": true
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/news/",
+    "status": 405,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/media/missing.png",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "body": "[HTML-страница Django]",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/media/../config/settings.py",
+    "status": 400,
+    "content_type": "text/html",
+    "location": null,
+    "body": "[HTML-страница Django]",
+    "passed": true
+  },
+  {
+    "method": "GET",
+    "path": "/media/photos/2026/11/18/django-models.png",
+    "status": 200,
+    "content_type": "image/png",
+    "passed": true,
+    "image_size": [
+      640,
+      240
+    ]
+  }
+]

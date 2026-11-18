@@ -1,0 +1,34 @@
+14 objects imported automatically (use -v 2 for details).
+
+1. CREATE: конструктор и save()
+После save(): pk назначен, rating = 3
+Три способа создания: 3 записи, границы рейтинга 1 и 5 сохранены
+2. READ: all(), filter(), exclude(), get()
+Прошли модерацию: ['Второй', 'Третий']
+exclude(is_moderated=True): ['Первый']
+Ленивый QuerySet: до list() 0 запросов, после 1, повторно 1
+SQL: SELECT "news_comment"."id", "news_comment"."user_name", "news_comment"."email", "news_comment"."text", "news_comment"."created_at", "news_comment"."is_moderated", "news_comment"."rating" FROM "news_comment" WHERE ("news_comment"."id" IN (2, 3, 4) AND "news_comment"."rating" >= 3)
+3. UPDATE: изменение полей и повторный save()
+Обновление подтверждено чтением из базы, created_at сохранено
+4. DELETE: удаление объекта
+Удаленный объект отсутствует, осталось 2 временных комментария
+5. Ошибки валидации и поиска
+rating 0 -> ValidationError
+rating 6 -> ValidationError
+rating None -> ValidationError
+email 'invalid' -> ValidationError
+text '' -> ValidationError
+user_name '' -> ValidationError
+user_name 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' -> ValidationError
+update(rating=0) -> IntegrityError, данные сохранены
+update(rating=6) -> IntegrityError, данные сохранены
+get удаленной записи -> DoesNotExist
+get нескольких записей -> MultipleObjectsReturned
+6. Практическая модель News
+News: создание, чтение, обновление updated_at и удаление выполнены
+Временные CRUD-сценарии отменены одной транзакцией
+7. Данные для самостоятельной работы
+[{'user_name': 'Анна', 'rating': 5, 'is_moderated': True}, {'user_name': 'Борис', 'rating': 1, 'is_moderated': True}, {'user_name': 'Вера', 'rating': 3, 'is_moderated': False}]
+Модерированные: ['Анна', 'Борис']
+Фото: /media/photos/2026/11/18/django-models.png
+Все сценарии ORM пройдены
