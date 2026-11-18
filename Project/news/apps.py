@@ -5,3 +5,4 @@ class NewsConfig(AppConfig):
     """Регистрирует новостное приложение в конфигурации Django."""
 
     name = "news"
+    verbose_name = "Новости"

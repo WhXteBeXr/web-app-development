@@ -1,0 +1,130 @@
+[
+  {
+    "scenario": "Пустая лента: 200 и сообщение",
+    "passed": true
+  },
+  {
+    "scenario": "Шаблон news/index.html и контекст",
+    "passed": true
+  },
+  {
+    "scenario": "Админка без входа требует авторизации",
+    "passed": true
+  },
+  {
+    "scenario": "Неверный пароль отклонен",
+    "passed": true
+  },
+  {
+    "scenario": "Вход суперпользователя через форму",
+    "passed": true
+  },
+  {
+    "scenario": "Русские названия приложения и моделей",
+    "passed": true
+  },
+  {
+    "scenario": "Открыть сайт ведет на ленту",
+    "passed": true
+  },
+  {
+    "scenario": "Пустой заголовок не сохраняется",
+    "passed": true
+  },
+  {
+    "scenario": "Добавление новости без фотографии",
+    "passed": true
+  },
+  {
+    "scenario": "Изменение через админку сохранено",
+    "passed": true
+  },
+  {
+    "scenario": "Новости по убыванию даты",
+    "passed": true
+  },
+  {
+    "scenario": "Автоэкранирование текста",
+    "passed": true
+  },
+  {
+    "scenario": "Статус неопубликованной записи показан",
+    "passed": true
+  },
+  {
+    "scenario": "Даты отформатированы",
+    "passed": true
+  },
+  {
+    "scenario": "Одинаковые даты: порядок по pk",
+    "passed": true
+  },
+  {
+    "scenario": "Колонки и ссылки редактирования",
+    "passed": true
+  },
+  {
+    "scenario": "Поиск по содержимому",
+    "passed": true
+  },
+  {
+    "scenario": "Поиск по заголовку",
+    "passed": true
+  },
+  {
+    "scenario": "Поиск без совпадений",
+    "passed": true
+  },
+  {
+    "scenario": "Добавление PNG через админку",
+    "passed": true
+  },
+  {
+    "scenario": "Шаблон выводит изображение",
+    "passed": true
+  },
+  {
+    "scenario": "Изображение доступно по MEDIA_URL",
+    "passed": true
+  },
+  {
+    "scenario": "Неверное изображение не сохраняется",
+    "passed": true
+  },
+  {
+    "scenario": "Подтверждение удаления доступно",
+    "passed": true
+  },
+  {
+    "scenario": "Удаление новости через админку",
+    "passed": true
+  },
+  {
+    "scenario": "Журнал действий админа",
+    "passed": true
+  },
+  {
+    "scenario": "Валидация рейтинга комментария в админке",
+    "passed": true
+  },
+  {
+    "scenario": "Обычный пользователь не входит в админку",
+    "passed": true
+  },
+  {
+    "scenario": "Тестовая страница прежней работы доступна",
+    "passed": true
+  },
+  {
+    "scenario": "HEAD без тела",
+    "passed": true
+  },
+  {
+    "scenario": "Неизвестный URL",
+    "passed": true
+  },
+  {
+    "scenario": "POST с токеном запрещен для списка",
+    "passed": true
+  }
+]

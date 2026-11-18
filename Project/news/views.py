@@ -1,14 +1,18 @@
-"""Два простых контроллера без шаблонов и обращения к базе данных."""
+"""Контроллер списка новостей и простая страница проверки маршрутов."""
 
 from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render
 from django.views.decorators.http import require_safe
+
+from .models import News
 
 
 @require_safe
 def index(request: HttpRequest) -> HttpResponse:
-    """Возвращает приветствие на главной странице приложения news."""
-    # Разрешаем чтение через GET и HEAD. Тело ответа задаем напрямую.
-    return HttpResponse("Hello world")
+    """Передает новости в HTML-шаблон в порядке, заданном моделью."""
+    # Запрос вычислится при обходе news в шаблоне, HTML в Python не собираем.
+    context = {"news": News.objects.all(), "title": "Список новостей"}
+    return render(request, "news/index.html", context)
 
 
 @require_safe

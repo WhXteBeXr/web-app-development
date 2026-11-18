@@ -15,6 +15,12 @@ class News(models.Model):
     photo = models.ImageField("Изображение", upload_to="photos/%Y/%m/%d/", blank=True)
     is_published = models.BooleanField("Опубликована", default=True)
 
+    class Meta:
+        verbose_name = "Новость"
+        verbose_name_plural = "Новости"
+        # При одинаковых датах первичный ключ сохраняет однозначный порядок.
+        ordering = ("-created_at", "-pk")
+
     def __str__(self) -> str:
         """Возвращает заголовок для понятного отображения объекта в shell."""
         return self.title
@@ -34,6 +40,8 @@ class Comment(models.Model):
     )
 
     class Meta:
+        verbose_name = "Комментарий"
+        verbose_name_plural = "Комментарии"
         constraints = (
             models.CheckConstraint(
                 condition=models.Q(rating__gte=1, rating__lte=5),

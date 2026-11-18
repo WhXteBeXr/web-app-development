@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ title }}</h1>
+        <nav aria-label="Навигация">
+            <a href="{% url 'news:index' %}">Новости</a> |
+            <a href="{% url 'news:test' %}">Тестовая страница</a> |
+            <a href="{% url 'admin:index' %}">Административная панель</a>
+        </nav>
+    </header>
+    <main>
+        {% for item in news %}
+            <article>
+                <h2>{{ item.title }}</h2>
+                <p>Создана: <time datetime="{{ item.created_at|date:'c' }}">{{ item.created_at|date:"d.m.Y H:i" }}</time></p>
+                <p>{{ item.content|linebreaksbr }}</p>
+                {% if item.photo %}
+                    <img src="{{ item.photo.url }}" alt="{{ item.title }}" width="320">
+                {% endif %}
+                <p>Статус: {% if item.is_published %}опубликована{% else %}не опубликована{% endif %}</p>
+            </article>
+        {% empty %}
+            <p>Новостей пока нет.</p>
+        {% endfor %}
+    </main>
+</body>
+</html>
