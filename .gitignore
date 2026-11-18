@@ -11,6 +11,7 @@
 .idea
 lab*/defense.md
 lab*/README.md
+Project/config/settings.py
 
 # AWS User-specific
 .idea/**/aws.xml
@@ -270,3 +271,7 @@ cython_debug/
 
 # Ruff
 .ruff_cache/
+
+
+# Django uploaded files
+Project/uploads/
