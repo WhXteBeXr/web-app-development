@@ -1,0 +1,170 @@
+[
+  {
+    "scenario": "Миграция сохранила старую новость с NULL category",
+    "passed": true
+  },
+  {
+    "scenario": "Без входа админка недоступна",
+    "passed": true
+  },
+  {
+    "scenario": "Вход администратора",
+    "passed": true
+  },
+  {
+    "scenario": "Автор создан через форму без фото",
+    "passed": true
+  },
+  {
+    "scenario": "Второй автор создан через форму",
+    "passed": true
+  },
+  {
+    "scenario": "Книга связана с автором: Первая книга",
+    "passed": true
+  },
+  {
+    "scenario": "Книга связана с автором: Вторая книга",
+    "passed": true
+  },
+  {
+    "scenario": "Книга связана с автором: Другая книга",
+    "passed": true
+  },
+  {
+    "scenario": "author.books возвращает только книги автора",
+    "passed": true
+  },
+  {
+    "scenario": "Строковые представления связей",
+    "passed": true
+  },
+  {
+    "scenario": "Список выводит автора, год и ISBN",
+    "passed": true
+  },
+  {
+    "scenario": "Фильтр книг по автору",
+    "passed": true
+  },
+  {
+    "scenario": "Фильтр книг по году",
+    "passed": true
+  },
+  {
+    "scenario": "Поиск книг: Первая книга",
+    "passed": true
+  },
+  {
+    "scenario": "Поиск книг: test-isbn-1",
+    "passed": true
+  },
+  {
+    "scenario": "Поиск книг: Первый",
+    "passed": true
+  },
+  {
+    "scenario": "Год изменен прямо в списке книг",
+    "passed": true
+  },
+  {
+    "scenario": "Обязательный автор проверяется формой",
+    "passed": true
+  },
+  {
+    "scenario": "Уникальность ISBN проверяется формой",
+    "passed": true
+  },
+  {
+    "scenario": "Проверка года 0",
+    "passed": true
+  },
+  {
+    "scenario": "Проверка года 10000",
+    "passed": true
+  },
+  {
+    "scenario": "Внешний ключ запрещает несуществующего автора",
+    "passed": true
+  },
+  {
+    "scenario": "Существующая новость связана с категорией через форму",
+    "passed": true
+  },
+  {
+    "scenario": "Обратная связь категории",
+    "passed": true
+  },
+  {
+    "scenario": "Категория выведена в шаблоне",
+    "passed": true
+  },
+  {
+    "scenario": "Фильтр новостей по категории",
+    "passed": true
+  },
+  {
+    "scenario": "Публикация изменена прямо в списке новостей",
+    "passed": true
+  },
+  {
+    "scenario": "PROTECT запрещает удаление категории с новостями",
+    "passed": true
+  },
+  {
+    "scenario": "Админка сообщает о защищенной категории",
+    "passed": true
+  },
+  {
+    "scenario": "POST не обходит защиту категории",
+    "passed": true
+  },
+  {
+    "scenario": "Пустая категория удаляется",
+    "passed": true
+  },
+  {
+    "scenario": "Новость без категории сохраняется и отображается",
+    "passed": true
+  },
+  {
+    "scenario": "Выборка книг и авторов одним SQL",
+    "passed": true
+  },
+  {
+    "scenario": "Выборка новостей и категорий одним SQL",
+    "passed": true
+  },
+  {
+    "scenario": "Подтверждение показывает каскадные книги",
+    "passed": true
+  },
+  {
+    "scenario": "CASCADE через админку удаляет автора и его книги",
+    "passed": true
+  },
+  {
+    "scenario": "CASCADE не затрагивает другого автора",
+    "passed": true
+  },
+  {
+    "scenario": "Тестовый маршрут первой работы сохранен",
+    "passed": true
+  },
+  {
+    "scenario": "HEAD ленты возвращает 200 без тела",
+    "passed": true
+  },
+  {
+    "scenario": "Рейтинг комментария второй работы по-прежнему проверяется",
+    "passed": true
+  },
+  {
+    "scenario": "PRAGMA foreign_key_check без нарушений",
+    "passed": true
+  },
+  {
+    "scenario": "Повторный запуск демонстрации без дублирования",
+    "passed": true
+  }
+]

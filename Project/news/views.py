@@ -11,7 +11,10 @@ from .models import News
 def index(request: HttpRequest) -> HttpResponse:
     """Передает новости в HTML-шаблон в порядке, заданном моделью."""
     # Запрос вычислится при обходе news в шаблоне, HTML в Python не собираем.
-    context = {"news": News.objects.all(), "title": "Список новостей"}
+    context = {
+        "news": News.objects.select_related("category"),
+        "title": "Список новостей",
+    }
     return render(request, "news/index.html", context)
 
 

@@ -1,0 +1,10 @@
+Migrations for 'news':
+  Project/news/migrations/0004_author_category_book_news_category.py
+    + Create model Author
+    + Create model Category
+    + Create model Book
+    + Add field category to news
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, news, sessions
+Running migrations:
+  Applying news.0004_author_category_book_news_category... OK

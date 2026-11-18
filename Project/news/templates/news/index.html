@@ -18,6 +18,7 @@
         {% for item in news %}
             <article>
                 <h2>{{ item.title }}</h2>
+                <p>Категория: {{ item.category|default:"Без категории" }}</p>
                 <p>Создана: <time datetime="{{ item.created_at|date:'c' }}">{{ item.created_at|date:"d.m.Y H:i" }}</time></p>
                 <p>{{ item.content|linebreaksbr }}</p>
                 {% if item.photo %}

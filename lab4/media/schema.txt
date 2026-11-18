@@ -1,0 +1,15 @@
+CREATE TABLE "news_category" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(150) NOT NULL)
+
+Foreign keys: []
+
+CREATE TABLE "news_news" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(150) NOT NULL, "content" text NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "photo" varchar(100) NOT NULL, "is_published" bool NOT NULL, "category_id" bigint NULL REFERENCES "news_category" ("id") DEFERRABLE INITIALLY DEFERRED)
+
+Foreign keys: [(0, 0, 'news_category', 'category_id', 'id', 'NO ACTION', 'NO ACTION', 'NONE')]
+
+CREATE TABLE "news_author" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "first_name" varchar(100) NOT NULL, "last_name" varchar(100) NOT NULL, "biography" text NOT NULL, "photo" varchar(100) NOT NULL)
+
+Foreign keys: []
+
+CREATE TABLE "news_book" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(200) NOT NULL, "publication_year" smallint unsigned NOT NULL CHECK ("publication_year" >= 0), "isbn" varchar(17) NOT NULL UNIQUE, "author_id" bigint NOT NULL REFERENCES "news_author" ("id") DEFERRABLE INITIALLY DEFERRED)
+
+Foreign keys: [(0, 0, 'news_author', 'author_id', 'id', 'NO ACTION', 'NO ACTION', 'NONE')]

@@ -1,0 +1,41 @@
+Проверка лабораторной 4: 18.11.2026
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python --version
+Python 3.14.10
+Код завершения: 0
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python -m django --version
+6.1.1
+Код завершения: 0
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python -m pip check --disable-pip-version-check
+No broken requirements found.
+Код завершения: 0
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python Project/manage.py check
+System check identified no issues (0 silenced).
+Код завершения: 0
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python Project/manage.py showmigrations news
+news
+ [X] 0001_initial
+ [X] 0002_comment_rating_comment_comment_rating_1_to_5
+ [X] 0003_alter_comment_options_alter_news_options
+ [X] 0004_author_category_book_news_category
+Код завершения: 0
+
+$ /home/WhXteBeXr/Development/PycharmProjects/web-app-development/.venv/bin/python Project/manage.py makemigrations --check --dry-run
+No changes detected
+Код завершения: 0
+
+$ .venv/bin/ruff check Project lab2/demo.py lab3/demo.py lab4/demo.py
+All checks passed!
+Код завершения: 0
+
+$ .venv/bin/ruff format --check Project lab2/demo.py lab3/demo.py lab4/demo.py
+20 files already formatted
+Код завершения: 0
+
+42 сценария связей и админки: пройдены.
+Демонстрации работ 2 и 3: повторно выполнены успешно.
+Браузер: список книг, фильтр по автору, форма связи и категории новостей.
