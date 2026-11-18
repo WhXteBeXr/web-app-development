@@ -9,6 +9,8 @@
 .idea/**/dictionaries
 .idea/**/shelf
 .idea
+lab*/defense.md
+lab*/README.md
 
 # AWS User-specific
 .idea/**/aws.xml
@@ -265,3 +267,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+
+# Ruff
+.ruff_cache/
