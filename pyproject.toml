@@ -16,3 +16,8 @@ select = [
     "UP",
     "RUF",
 ]
+
+[tool.ruff.lint.per-file-ignores]
+"Project/**/*.py" = ["RUF001", "RUF002", "RUF003"]
+"lab*/demo.py" = ["RUF001", "RUF002", "RUF003"]
+"**/migrations/*.py" = ["RUF012"]

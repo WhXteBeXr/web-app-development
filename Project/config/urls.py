@@ -1,5 +1,7 @@
 """Корневой маршрутизатор передает адреса news/ приложению."""
 
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
@@ -8,3 +10,7 @@ urlpatterns = [
     # Остаток пути, например test/, разбирается внутри news.urls.
     path("news/", include("news.urls")),
 ]
+
+# Встроенная раздача файлов используется только учебным сервером с DEBUG=True.
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

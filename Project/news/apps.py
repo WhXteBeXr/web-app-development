@@ -2,4 +2,6 @@ from django.apps import AppConfig
 
 
 class NewsConfig(AppConfig):
-    name = 'news'
+    """Регистрирует новостное приложение в конфигурации Django."""
+
+    name = "news"
