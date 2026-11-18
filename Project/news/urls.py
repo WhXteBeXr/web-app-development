@@ -9,4 +9,5 @@ app_name = "news"
 urlpatterns = [
     path("", views.index, name="index"),
     path("test/", views.test, name="test"),
+    path("<int:pk>/", views.detail, name="detail"),
 ]

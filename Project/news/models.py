@@ -50,6 +50,10 @@ class News(models.Model):
         """Возвращает заголовок для понятного отображения объекта в shell."""
         return self.title
 
+    def get_publication_status(self) -> str:
+        """Возвращает подпись статуса для вызова из HTML-шаблона без аргументов."""
+        return "Опубликована" if self.is_published else "Не опубликована"
+
 
 class Comment(models.Model):
     """Хранит автора, текст и состояние модерации комментария."""

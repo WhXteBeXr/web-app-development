@@ -1,34 +1,40 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }}</title>
-</head>
-<body>
-    <header>
-        <h1>{{ title }}</h1>
-        <nav aria-label="Навигация">
-            <a href="{% url 'news:index' %}">Новости</a> |
-            <a href="{% url 'news:test' %}">Тестовая страница</a> |
-            <a href="{% url 'admin:index' %}">Административная панель</a>
-        </nav>
-    </header>
-    <main>
-        {% for item in news %}
-            <article>
-                <h2>{{ item.title }}</h2>
-                <p>Категория: {{ item.category|default:"Без категории" }}</p>
-                <p>Создана: <time datetime="{{ item.created_at|date:'c' }}">{{ item.created_at|date:"d.m.Y H:i" }}</time></p>
-                <p>{{ item.content|linebreaksbr }}</p>
-                {% if item.photo %}
-                    <img src="{{ item.photo.url }}" alt="{{ item.title }}" width="320">
-                {% endif %}
-                <p>Статус: {% if item.is_published %}опубликована{% else %}не опубликована{% endif %}</p>
-            </article>
-        {% empty %}
-            <p>Новостей пока нет.</p>
-        {% endfor %}
-    </main>
-</body>
-</html>
+{% extends "news/base.html" %}
+{% load static %}
+
+{% block content %}
+<header class="mb-4">
+    <p class="text-uppercase text-secondary small mb-2">Лабораторная работа 5</p>
+    <h1 class="display-6 fw-semibold">{{ title }}</h1>
+    <p class="text-secondary mb-0">Текущее время: {% now "d.m.Y H:i:s" %}</p>
+</header>
+{% for item in news %}
+<article class="card shadow-sm mb-4 overflow-hidden">
+    <div class="card-header bg-white d-flex flex-wrap justify-content-between gap-2 py-3">
+        <span>Категория: {{ item.category|default:"Без категории" }}</span>
+        <span class="text-secondary">Новость {{ forloop.counter }}</span>
+    </div>
+    <div class="row g-0">
+        <div class="col-md-4">
+            {% if item.photo %}
+                <img src="{{ item.photo.url }}" class="news-image" alt="{{ item.title }}">
+            {% else %}
+                <img src="{% static 'news/placeholder.svg' %}" class="news-image" alt="Изображение не добавлено">
+            {% endif %}
+        </div>
+        <div class="col-md-8">
+            <div class="card-body p-4">
+                <h2 class="card-title h4 {% cycle 'text-danger' 'text-success' %}">{{ item.title }}</h2>
+                <div class="card-text mb-3">{{ item.content|default:"Текст новости пока не добавлен."|linebreaks|truncatewords_html:50 }}</div>
+                <a href="{% url 'news:detail' item.pk %}" class="btn btn-primary" aria-label="Подробнее: {{ item.title }}">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-secondary bg-white d-flex flex-wrap justify-content-between gap-2">
+        <time datetime="{{ item.created_at|date:'c' }}">{{ item.created_at|date:"d.m.Y H:i:s" }}</time>
+        <span>Статус: {{ item.get_publication_status }}</span>
+    </div>
+</article>
+{% empty %}
+    <div class="alert alert-secondary">Новостей пока нет.</div>
+{% endfor %}
+{% endblock %}

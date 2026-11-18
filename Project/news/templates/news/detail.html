@@ -1,0 +1,22 @@
+{% extends "news/base.html" %}
+{% load static %}
+
+{% block content %}
+<a href="{% url 'news:index' %}" class="d-inline-block mb-3">Вернуться к списку новостей</a>
+<article class="card shadow-sm overflow-hidden">
+    <div class="card-header bg-white py-3">Категория: {{ item.category|default:"Без категории" }}</div>
+    <div class="card-body p-4 p-lg-5">
+        <h1 class="mb-3">{{ item.title }}</h1>
+        <p class="text-secondary">
+            <time datetime="{{ item.created_at|date:'c' }}">{{ item.created_at|date:"d.m.Y H:i:s" }}</time>
+            · {{ item.get_publication_status }}
+        </p>
+        {% if item.photo %}
+            <img src="{{ item.photo.url }}" class="detail-image mb-4 rounded" alt="{{ item.title }}">
+        {% else %}
+            <img src="{% static 'news/placeholder.svg' %}" class="detail-image mb-4 rounded" alt="Изображение не добавлено">
+        {% endif %}
+        <div class="news-content">{{ item.content|default:"Текст новости пока не добавлен."|linebreaks }}</div>
+    </div>
+</article>
+{% endblock %}

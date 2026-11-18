@@ -1,0 +1,218 @@
+[
+  {
+    "scenario": "Пустая лента: статус 200 и сообщение",
+    "passed": true
+  },
+  {
+    "scenario": "Базовый и дочерний шаблоны",
+    "passed": true
+  },
+  {
+    "scenario": "Русский язык и адаптивный viewport",
+    "passed": true
+  },
+  {
+    "scenario": "CSS и JS Bootstrap одной версии CDN",
+    "passed": true
+  },
+  {
+    "scenario": "SRI и crossorigin для ресурсов",
+    "passed": true
+  },
+  {
+    "scenario": "Локальные статические файлы найдены",
+    "passed": true
+  },
+  {
+    "scenario": "Кнопка мобильного меню связана с контейнером",
+    "passed": true
+  },
+  {
+    "scenario": "Главная ссылка ведет на существующую ленту",
+    "passed": true
+  },
+  {
+    "scenario": "Добавить новость ведет на форму админки",
+    "passed": true
+  },
+  {
+    "scenario": "Форма добавления требует авторизации",
+    "passed": true
+  },
+  {
+    "scenario": "Три карточки для трех записей",
+    "passed": true
+  },
+  {
+    "scenario": "Порядок новостей сохранен",
+    "passed": true
+  },
+  {
+    "scenario": "Нумерация карточек с единицы",
+    "passed": true
+  },
+  {
+    "scenario": "Цвета cycle чередуются",
+    "passed": true
+  },
+  {
+    "scenario": "Категория показана",
+    "passed": true
+  },
+  {
+    "scenario": "Отсутствующая категория заменена",
+    "passed": true
+  },
+  {
+    "scenario": "Метод модели вызван в шаблоне",
+    "passed": true
+  },
+  {
+    "scenario": "Обе ветви метода статуса",
+    "passed": true
+  },
+  {
+    "scenario": "Текст сокращен до 50 слов",
+    "passed": true
+  },
+  {
+    "scenario": "Переносы короткого текста сохранены",
+    "passed": true
+  },
+  {
+    "scenario": "Пустой текст заменен подписью",
+    "passed": true
+  },
+  {
+    "scenario": "Локальная заглушка без фото",
+    "passed": true
+  },
+  {
+    "scenario": "now выводит время формирования",
+    "passed": true
+  },
+  {
+    "scenario": "date выводит дату создания",
+    "passed": true
+  },
+  {
+    "scenario": "Подробнее ведет на реальный адрес",
+    "passed": true
+  },
+  {
+    "scenario": "Атрибут доступного имени кнопки",
+    "passed": true
+  },
+  {
+    "scenario": "Страница полной новости: 200",
+    "passed": true
+  },
+  {
+    "scenario": "Полный текст не обрезан",
+    "passed": true
+  },
+  {
+    "scenario": "Абзацы полного текста оформлены",
+    "passed": true
+  },
+  {
+    "scenario": "Дочерний detail использует базовый шаблон",
+    "passed": true
+  },
+  {
+    "scenario": "Заголовок полной новости из модели",
+    "passed": true
+  },
+  {
+    "scenario": "Ссылка возврата есть",
+    "passed": true
+  },
+  {
+    "scenario": "Нет новости - 404",
+    "passed": true
+  },
+  {
+    "scenario": "Некорректный идентификатор - 404",
+    "passed": true
+  },
+  {
+    "scenario": "Отрицательный идентификатор - 404",
+    "passed": true
+  },
+  {
+    "scenario": "Старая тестовая страница доступна",
+    "passed": true
+  },
+  {
+    "scenario": "HEAD без тела /news/",
+    "passed": true
+  },
+  {
+    "scenario": "POST без CSRF отвергнут /news/",
+    "passed": true
+  },
+  {
+    "scenario": "HEAD без тела /news/1/",
+    "passed": true
+  },
+  {
+    "scenario": "POST без CSRF отвергнут /news/1/",
+    "passed": true
+  },
+  {
+    "scenario": "POST с CSRF дает 405 /news/",
+    "passed": true
+  },
+  {
+    "scenario": "POST с CSRF дает 405 /news/1/",
+    "passed": true
+  },
+  {
+    "scenario": "Экранирование HTML /news/",
+    "passed": true
+  },
+  {
+    "scenario": "Экранирование HTML /news/1/",
+    "passed": true
+  },
+  {
+    "scenario": "Сохраненная фотография показана /news/",
+    "passed": true
+  },
+  {
+    "scenario": "Сохраненная фотография показана /news/1/",
+    "passed": true
+  },
+  {
+    "scenario": "MEDIA отдает оригинальные байты",
+    "passed": true
+  },
+  {
+    "scenario": "Список с категориями одним SQL",
+    "passed": true
+  },
+  {
+    "scenario": "Полная новость с категорией одним SQL",
+    "passed": true
+  },
+  {
+    "scenario": "CASCADE автора четвертой работы сохранен",
+    "passed": true
+  },
+  {
+    "scenario": "PROTECT категории сохранен",
+    "passed": true
+  },
+  {
+    "scenario": "Админка книг доступна",
+    "passed": true
+  },
+  {
+    "scenario": "Админка новостей доступна",
+    "passed": true
+  },
+  {
+    "scenario": "Демонстрация работы 5 повторяется без дублирования",
+    "passed": true
+  }
+]
