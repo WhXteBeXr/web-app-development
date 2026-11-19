@@ -31,7 +31,7 @@
 
 ## Репозиторий
 
-[web-app-development](https://github.com/WhXteBeXr/web-app-development), общий код в каталоге `Project/`.
+[web-app-development, лабораторная 5](https://github.com/WhXteBeXr/web-app-development/tree/main/lab5)
 
 ## Цель работы
 

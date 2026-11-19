@@ -30,7 +30,7 @@
 
 ## Репозиторий
 
-[web-app-development](https://github.com/WhXteBeXr/web-app-development), общий код в `Project/`.
+[web-app-development, лабораторная 4](https://github.com/WhXteBeXr/web-app-development/tree/main/lab4)
 
 ## Цель работы
 
